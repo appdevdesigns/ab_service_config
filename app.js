@@ -23,6 +23,14 @@ var possibleBatches = [
       source: path.sep + path.join("app", "mysql", "secret"),
       dest: path.sep + "mysql_password",
    },
+   {
+      source: path.sep + path.join("app", "nginx"),
+      dest: path.sep + path.join("nginx_etc", "nginx"),
+   },
+   {
+      source: path.sep + path.join("app", "ssl"),
+      dest: path.sep + path.join("nginx_etc", "ssl", "certs"),
+   },
 ];
 
 var batches = [];
