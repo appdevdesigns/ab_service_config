@@ -73,22 +73,26 @@ function copyItem(pathSource, pathConfig, file, currPath = null) {
       currPath ? path.join(currPath, file) : file
    );
 
-   var stat = fs.lstatSync(sourceFile);
-   if (stat.isDirectory()) {
-      fs.mkdirSync(configFile, { recursive: true });
-      var subFiles = fs.readdirSync(sourceFile);
-      (subFiles || []).forEach((f) => {
-         copyItem(
-            pathSource,
-            pathConfig,
-            f,
-            currPath ? path.join(currPath, file) : file
-         );
-      });
-   } else {
-      console.log(`copying: ${sourceFile} -> ${configFile}`);
-      contents = fs.readFileSync(sourceFile);
-      fs.writeFileSync(configFile, contents);
+   try {
+      var stat = fs.lstatSync(sourceFile);
+      if (stat.isDirectory()) {
+         fs.mkdirSync(configFile, { recursive: true });
+         var subFiles = fs.readdirSync(sourceFile);
+         (subFiles || []).forEach((f) => {
+            copyItem(
+               pathSource,
+               pathConfig,
+               f,
+               currPath ? path.join(currPath, file) : file
+            );
+         });
+      } else {
+         console.log(`copying: ${sourceFile} -> ${configFile}`);
+         contents = fs.readFileSync(sourceFile);
+         fs.writeFileSync(configFile, contents);
+      }
+   } catch (e) {
+      console.log(`skipping file ${sourceFile}`);
    }
 }
 
