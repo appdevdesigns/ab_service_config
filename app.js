@@ -1,6 +1,7 @@
 //
 // config
-// (AppBuilder) This service is responsible for managing the configuration volume and initializing it&#39;s contents
+// (AppBuilder) This service is responsible for managing the configuration
+// volume and initializing it's contents
 //
 
 var fs = require("fs");
@@ -10,25 +11,28 @@ var configPath = path.sep + "config";
 // var pathSource = path.sep + path.join("app", "config");
 
 var possibleBatches = [
+   // All our BASE config files
    { source: path.sep + path.join("app", "config"), dest: configPath },
+   // The dev config file
+   { source: path.sep + path.join("config_safe"), dest: configPath },
    {
-      source: path.sep + path.join("app", "mysql", "conf.d"),
+      source: path.sep + path.join("mysql_config_source"),
       dest: path.sep + "mysql_config",
    },
    {
-      source: path.sep + path.join("app", "mysql", "key"),
+      source: path.sep + path.join("mysql_key_source"),
       dest: path.sep + "mysql_key",
    },
    {
-      source: path.sep + path.join("app", "mysql", "secret"),
+      source: path.sep + path.join("mysql_password_source"),
       dest: path.sep + "mysql_password",
    },
    {
-      source: path.sep + path.join("app", "nginx"),
+      source: path.sep + path.join("nginx"),
       dest: path.sep + path.join("nginx_etc", "nginx"),
    },
    {
-      source: path.sep + path.join("app", "ssl"),
+      source: path.sep + path.join("ssl"),
       dest: path.sep + path.join("nginx_etc", "ssl", "certs"),
    },
 ];
@@ -55,9 +59,9 @@ if (!isInstall) {
  * attempt to smartly copy the given file. If the file is a directory, then
  * try to recreate the directory recursively.
  * @param {string} file
- *		  the name of the entry we are trying to copy
+ *      the name of the entry we are trying to copy
  * @param {string} currPath
- *		  the current relative path from our {pathSource} that we are under.
+ *      the current relative path from our {pathSource} that we are under.
  */
 function copyItem(pathSource, pathConfig, file, currPath = null) {
    var sourceFile = path.join(
