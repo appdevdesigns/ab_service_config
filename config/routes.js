@@ -80,11 +80,11 @@ module.exports.routes = {
 
    // definition_manager routes:
    "/definition/import": "definition_manager/json-import",
-   "get /definition_manager/find": "definition_manager/find",
+   // "get /definition_manager/find": "definition_manager/find",
 
    // process_manager routes:
    "post /process/inbox/register": "process_manager/inbox-register",
    "put /process/inbox/:ID": "process_manager/inbox-update",
 
-   "/sg": "SiteController.sg", // testing out the SG library
+   // "/sg": "SiteController.sg", // testing out the SG library
 };
