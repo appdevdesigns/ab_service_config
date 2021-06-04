@@ -42,6 +42,9 @@ module.exports.routes = {
    "post /auth/login": "auth/login",
    // process the password login
 
+   "post /auth/logout": "auth/logout",
+   // process the password login
+
    // file_processor routes:
    "post /file/upload/:objID/:fieldID/:isWebix": "file_processor/file-upload",
    "get  /file/:ID": "file_processor/file-get",
