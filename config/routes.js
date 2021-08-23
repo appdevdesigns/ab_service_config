@@ -83,7 +83,7 @@ module.exports.routes = {
 
    // definition_manager routes:
    "/definition/import": "definition_manager/json-import",
-   // "get /definition_manager/find": "definition_manager/find",
+   "post /test/import": "definition_manager/test-import",
 
    // process_manager routes:
    "post /process/inbox/register": "process_manager/inbox-register",
