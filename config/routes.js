@@ -84,6 +84,7 @@ module.exports.routes = {
    // definition_manager routes:
    "/definition/import": "definition_manager/json-import",
    "post /test/import": "definition_manager/test-import",
+   "post /test/reset": "definition_manager/test-reset",
 
    // process_manager routes:
    "post /process/inbox/register": "process_manager/inbox-register",
