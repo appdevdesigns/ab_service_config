@@ -60,6 +60,7 @@ module.exports.routes = {
     *                                                                          *
     ***************************************************************************/
    // tenant_manager routes:
+   "post /tenant/add": "tenant_manager/tenant-add",
    // "/tenant_manager/find": "tenant_manager/find",
 
    // appbuilder routes:
