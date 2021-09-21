@@ -45,6 +45,13 @@ module.exports.routes = {
    "post /auth/logout": "auth/logout",
    // process the password login
 
+   // Plugin Loading
+   "get /plugin/:key": {
+      controller: "SiteController",
+      action: "pluginLoad",
+      skipAssets: false,
+   }, // "SiteController.pluginLoad",
+
    // file_processor routes:
    "post /file/upload/:objID/:fieldID/:isWebix": "file_processor/file-upload",
    "get  /file/:ID": "file_processor/file-get",
@@ -83,6 +90,12 @@ module.exports.routes = {
    "get /app_builder/object/:objID/track": "log_manager/rowlog-find",
 
    // definition_manager routes:
+   "post /definition/register": "definition_manager/register-updates",
+   "get /definition/export/:ID": "definition_manager/export-app",
+   "delete /definition/:ID": "definition_manager/definition-delete",
+   "put /definition/:ID": "definition_manager/definition-update",
+   "post /definition/create": "definition_manager/definition-create",
+   "get /definition/export/all": "definition_manager/export-all",
    "/definition/import": "definition_manager/json-import",
    "post /test/import": "definition_manager/test-import",
    "post /test/reset": "definition_manager/test-reset",
