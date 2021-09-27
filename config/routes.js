@@ -90,12 +90,14 @@ module.exports.routes = {
    "get /app_builder/object/:objID/track": "log_manager/rowlog-find",
 
    // definition_manager routes:
+   "get /definition/allapplications":
+      "definition_manager/definition-allapplications",
    "post /definition/register": "definition_manager/register-updates",
-   "get /definition/export/:ID": "definition_manager/export-app",
    "delete /definition/:ID": "definition_manager/definition-delete",
    "put /definition/:ID": "definition_manager/definition-update",
    "post /definition/create": "definition_manager/definition-create",
    "get /definition/export/all": "definition_manager/export-all",
+   "get /definition/export/:ID": "definition_manager/export-app",
    "/definition/import": "definition_manager/json-import",
    "post /test/import": "definition_manager/test-import",
    "post /test/reset": "definition_manager/test-reset",
