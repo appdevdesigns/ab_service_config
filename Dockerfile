@@ -10,7 +10,7 @@
 ##
 FROM digiserve/service-cli:develop
 
-RUN git clone https://github.com/appdevdesigns/ab_service_config.git app && cd app && git checkout develop && npm install
+RUN git clone https://github.com/digi-serve/ab_service_config.git app && cd app && git checkout develop && npm install
 
 WORKDIR /app
 
