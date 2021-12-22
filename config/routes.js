@@ -76,10 +76,10 @@ module.exports.routes = {
    "get /app_builder/model/:objID/count": "appbuilder/model-get-count",
    // Create
    "post /app_builder/model/:objID": "appbuilder/model-post",
-   "post /app_builder/model/:objID/batch": "appbuilder/model-post-batch",
+   "post /app_builder/batch/model/:objID": "appbuilder/model-post-batch",
    // Update
    "put /app_builder/model/:objID/:ID": "appbuilder/model-update",
-   "put /app_builder/model/:objID/:ID/batch": "appbuilder/model-update-batch",
+   "put /app_builder/batch/model/:objID": "appbuilder/model-update-batch",
    // Delete
    "delete /app_builder/model/:objID/:ID": "appbuilder/model-delete",
 
@@ -90,6 +90,16 @@ module.exports.routes = {
    "get /app_builder/object/:objID/track": "log_manager/rowlog-find",
 
    // definition_manager routes:
+   "post /definition/migrate/object/:objID/field/:ID":
+      "definition_manager/migrate-field-create",
+   "put /definition/migrate/object/:objID/field/:ID":
+      "definition_manager/migrate-field-update",
+   "delete /definition/migrate/object/:objID/field/:ID":
+      "definition_manager/migrate-field-down",
+   "delete /definition/migrate/object/:ID":
+      "definition_manager/migrate-object-down",
+   "post /definition/migrate/object/:ID":
+      "definition_manager/migrate-object-create",
    "get /definition/allapplications":
       "definition_manager/definition-allapplications",
    "post /definition/register": "definition_manager/register-updates",
