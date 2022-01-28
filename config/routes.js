@@ -90,6 +90,10 @@ module.exports.routes = {
    "get /app_builder/object/:objID/track": "log_manager/rowlog-find",
 
    // definition_manager routes:
+   "delete /definition/migrate/object/:objID/index/:ID":
+      "definition_manager/migrate-index-delete",
+   "post /definition/migrate/object/:objID/index/:ID":
+      "definition_manager/migrate-index-create",
    "post /definition/migrate/object/:objID/field/:ID":
       "definition_manager/migrate-field-create",
    "put /definition/migrate/object/:objID/field/:ID":
