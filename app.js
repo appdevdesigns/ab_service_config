@@ -118,7 +118,7 @@ function runBatch(batch) {
       try {
          var stat = fs.lstatSync(configFile);
          if (stat.isDirectory()) {
-            fs.rmdirSync(configFile, { recursive: true });
+            fs.rmSync(configFile, { recursive: true });
          } else if (stat.isFile()) {
             fs.unlinkSync(configFile);
          }
