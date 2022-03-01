@@ -39,11 +39,16 @@ module.exports.routes = {
    "get /config": "SiteController.config",
    // request the configuration information for the current user
 
+   "get /auth/password/reset": "auth/reset-password-verify",
+   "post /auth/password/reset": "auth/reset-password-update",
+   "post /auth/login/reset": "auth/reset-password-request",
+   // password reset request
+
    "post /auth/login": "auth/login",
    // process the password login
 
    "post /auth/logout": "auth/logout",
-   // process the password login
+   // process the password logout
 
    // Plugin Loading
    "get /plugin/:key": {
