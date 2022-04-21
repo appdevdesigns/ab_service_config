@@ -126,4 +126,7 @@ module.exports.routes = {
    "put /process/inbox/:ID": "process_manager/inbox-update",
 
    // "/sg": "SiteController.sg", // testing out the SG library
+   // commcenter routes:
+   "post /commcenter/room/:key": "commcenter/room-join",
+   "put /commcenter/room/:key": "commcenter/room-send",
 };
