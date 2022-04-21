@@ -51,7 +51,7 @@ module.exports.routes = {
    // process the password logout
 
    // Plugin Loading
-   "get /plugin/:key": {
+   "get /plugin/:tenant/:key": {
       controller: "SiteController",
       action: "pluginLoad",
       skipAssets: false,
