@@ -76,6 +76,7 @@ module.exports.routes = {
    // "/tenant_manager/find": "tenant_manager/find",
 
    // appbuilder routes:
+   "get /appbuilder/csv-export/:viewID": "appbuilder/csv-export",
    // Find
    "get /app_builder/model/:objID": "appbuilder/model-get",
    "get /app_builder/model/:objID/count": "appbuilder/model-get-count",
