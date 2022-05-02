@@ -127,6 +127,8 @@ module.exports.routes = {
 
    // "/sg": "SiteController.sg", // testing out the SG library
    // commcenter routes:
+   "put /commcenter/socket/:key": "commcenter/socket-send",
+   "post /commcenter/socket/:key": "commcenter/socket-join",
    "post /commcenter/room/:key": "commcenter/room-join",
    "put /commcenter/room/:key": "commcenter/room-send",
 };
