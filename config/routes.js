@@ -126,5 +126,9 @@ module.exports.routes = {
    "post /process/inbox/register": "process_manager/inbox-register",
    "put /process/inbox/:ID": "process_manager/inbox-update",
 
+   // custom_reports routes:
+   "get /custom_reports/well-receipt": "custom_reports/well-receipt",
+   "get /custom_reports/well-invoice": "custom_reports/well-invoice",
+
    // "/sg": "SiteController.sg", // testing out the SG library
 };
