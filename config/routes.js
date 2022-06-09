@@ -131,4 +131,6 @@ module.exports.routes = {
    "get /custom_reports/well-invoice": "custom_reports/well-invoice",
 
    // "/sg": "SiteController.sg", // testing out the SG library
+   // relay routes:
+   "get /relay/user-qr": "relay/user-qr",
 };
