@@ -121,6 +121,9 @@ module.exports.routes = {
    "/definition/import": "definition_manager/json-import",
    "post /test/import": "definition_manager/test-import",
    "post /test/reset": "definition_manager/test-reset",
+   "get /definition/myapps": "definition_manager/definition-for-role",
+   "get /definition/check-update":
+      "definition_manager/definitions-check-update",
 
    // process_manager routes:
    "post /process/inbox/register": "process_manager/inbox-register",
