@@ -126,6 +126,7 @@ module.exports.routes = {
    "post /process/inbox/register": "process_manager/inbox-register",
    "put /process/inbox/:ID": "process_manager/inbox-update",
    "post /process/inbox/meta": "process_manager/inbox-meta",
+   "post /process/external": "process_manager/external",
 
    // custom_reports routes:
    "get /custom_reports/well-receipt": "custom_reports/well-receipt",
