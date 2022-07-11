@@ -124,6 +124,8 @@ module.exports.routes = {
    "get /definition/myapps": "definition_manager/definition-for-role",
    "get /definition/check-update":
       "definition_manager/definitions-check-update",
+   "post /definition/tenants-update-application":
+      "definition_manager/tenants-update-application",
 
    // process_manager routes:
    "post /process/inbox/register": "process_manager/inbox-register",
