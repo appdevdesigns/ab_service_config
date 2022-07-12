@@ -132,6 +132,7 @@ module.exports.routes = {
    "put /process/inbox/:ID": "process_manager/inbox-update",
    "post /process/inbox/meta": "process_manager/inbox-meta",
    "post /process/external": "process_manager/external",
+   "put /process/reset/:taskID": "process_manager/reset",
 
    // custom_reports routes:
    "get /custom_reports/well-receipt": "custom_reports/well-receipt",
