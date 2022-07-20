@@ -9,7 +9,7 @@ module.exports = {
 
    /*************************************************************************/
    /* maxFailedLogins: {integer} how many failed logins before rejecting    */
-   /*                  any more                                             */
+   /*                  any more login attempts                              */
    /*************************************************************************/
-   maxFailedLogins: 5
+   maxFailedLogins: 5,
 };

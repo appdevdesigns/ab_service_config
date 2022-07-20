@@ -9,8 +9,14 @@
  */
 
 var defaultStack = ["abUtils", "authTenant", "authUser"];
+var noAuth = ["abUtils", "authTenant"];
 
 module.exports.policies = {
+   SiteController: {
+      favicon: noAuth,
+      sailsio: noAuth
+   },
+   
    /***************************************************************************
     *                                                                          *
     * Default policy for all controllers and actions, unless overridden.       *

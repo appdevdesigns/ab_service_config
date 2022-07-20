@@ -8,9 +8,16 @@
 ## $ docker build -t digiserve/ab-config:master .
 ## $ docker push digiserve/ab-config:master
 ##
-FROM digiserve/service-cli:master
 
-RUN git clone --recursive https://github.com/appdevdesigns/ab_service_config.git app && cd app && npm install
+ARG BRANCH=master
+
+FROM digiserve/service-cli:${BRANCH}
+
+COPY . /app
+
+WORKDIR /app
+
+RUN npm i -f
 
 WORKDIR /app
 
