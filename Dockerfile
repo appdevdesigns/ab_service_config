@@ -8,9 +8,16 @@
 ## $ docker build -t digiserve/ab-config:develop .
 ## $ docker push digiserve/ab-config:develop
 ##
-FROM digiserve/service-cli:develop
 
-RUN git clone https://github.com/digi-serve/ab_service_config.git app && cd app && git checkout develop && npm install
+ARG BRANCH=master
+
+FROM digiserve/service-cli:${BRANCH}
+
+COPY . /app
+
+WORKDIR /app
+
+RUN npm i -f
 
 WORKDIR /app
 
