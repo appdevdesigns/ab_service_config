@@ -1,12 +1,12 @@
 ##
-## digiserve/ab-config:develop
+## digiserve/ab-config:master
 ##
 ## This is our microservice for our AppBuilder CRUD operations.
 ##
 ## Docker Commands:
 ## ---------------
-## $ docker build -t digiserve/ab-config:develop .
-## $ docker push digiserve/ab-config:develop
+## $ docker build -t digiserve/ab-config:master .
+## $ docker push digiserve/ab-config:master
 ##
 
 ARG BRANCH=master
