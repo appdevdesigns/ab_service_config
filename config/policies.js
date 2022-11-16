@@ -8,15 +8,15 @@
  * https://sailsjs.com/docs/concepts/policies
  */
 
-var defaultStack = ["abUtils", "authTenant", "authUser"];
+var defaultStack = ["abUtils", "authTenant", "authUser", "authSwitcheroo"];
 var noAuth = ["abUtils", "authTenant"];
 
 module.exports.policies = {
    SiteController: {
       favicon: noAuth,
-      sailsio: noAuth
+      // sailsio: noAuth,  // <-- now served by nginx
    },
-   
+
    /***************************************************************************
     *                                                                          *
     * Default policy for all controllers and actions, unless overridden.       *

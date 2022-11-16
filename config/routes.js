@@ -34,7 +34,6 @@ module.exports.routes = {
 
    // Static Resources for our Web Clients
    "/favicon.ico": "SiteController.favicon",
-   "get /sails.io.js": "SiteController.sailsio",
 
    "get /config": "SiteController.config",
    // request the configuration information for the current user
@@ -49,6 +48,12 @@ module.exports.routes = {
 
    "post /auth/logout": "auth/logout",
    // process the password logout
+
+   "post /auth/switcheroo/:userID": "auth/switcheroo",
+   // create a swticheroo assignment.
+
+   "delete /auth/switcheroo": "auth/switcheroo-clear",
+   // removes a swticheroo assignment.
 
    // Plugin Loading
    "get /plugin/:tenant/:key": {
