@@ -139,6 +139,11 @@ module.exports.routes = {
    "post /process/external": "process_manager/external",
    "put /process/reset/:taskID": "process_manager/reset",
 
+   // Process Trigger Timer
+   "put /process/timer/:ID/start": "process_manager/timer-start",
+   "put /process/timer/:ID/stop": "process_manager/timer-stop",
+   "get /process/timer/:ID": "process_manager/timer-get",
+
    // custom_reports routes:
    "get /custom_reports/well-receipt": "custom_reports/well-receipt",
    "get /custom_reports/well-invoice": "custom_reports/well-invoice",
