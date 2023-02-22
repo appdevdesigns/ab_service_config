@@ -142,7 +142,7 @@ module.exports.routes = {
    // Process Trigger Timer
    "put /process/timer/:ID/start": "process_manager/timer-start",
    "put /process/timer/:ID/stop": "process_manager/timer-stop",
-   "get /process/timer/:ID": "process_manager/timer-get",
+   "get /process/timer/:ID": "process_manager/timer-status",
 
    // custom_reports routes:
    "get /custom_reports/well-receipt": "custom_reports/well-receipt",
