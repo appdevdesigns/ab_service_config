@@ -17,7 +17,7 @@ module.exports.session = {
    * of your users, forcing them to log in again.                             *
    *                                                                          *
    ***************************************************************************/
-  secret: "cf1e0dd462546522d7cebec3f4b841fc"
+  secret: "cf1e0dd462546522d7cebec3f4b841fc",
 
   /***************************************************************************
    *                                                                          *
@@ -30,7 +30,24 @@ module.exports.session = {
    * https://sailsjs.com/config/session                                       *
    *                                                                          *
    ***************************************************************************/
+  //// Sails Default
   // isSessionDisabled: function (req){
   //   return !!req.path.match(req._sails.LOOKS_LIKE_ASSET_RX);
   // },
+
+  //// Don't disable sessions for "/plugin/*"
+  // isSessionDisabled: function (req) {
+  //   // Enable session for all plugin requests.
+  //   if (req.path.match(/^\/plugin\//)) { 
+  //     return false;
+  //   }
+  //   // Otherwise, disable session for all requests that look like assets.
+  //   return !!req.path.match(req._sails.LOOKS_LIKE_ASSET_RX);
+  // },
+
+  //// Never disable sessions
+  isSessionDisabled: function (req) {
+    return false;
+  },
+
 };
