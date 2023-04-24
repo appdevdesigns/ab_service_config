@@ -148,6 +148,7 @@ module.exports.routes = {
    // custom_reports routes:
    "get /custom_reports/well-receipt": "custom_reports/well-receipt",
    "get /custom_reports/well-invoice": "custom_reports/well-invoice",
+   "get /custom_reports/well-session": "custom_reports/well-session",
    "get /report/:key": "custom_reports/report",
 
    // "/sg": "SiteController.sg", // testing out the SG library
